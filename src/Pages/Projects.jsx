@@ -1,29 +1,69 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Proposify from "../assets/proposify.png";
+import ECommerce from "../assets/E-commerce.png";
+import Bhasaka from "../assets/BhasakaTech.png";
+import Akamai from "../assets/akamai.png";
+import Sarat from "../assets/sarat.png";
+import BusinessLabs from "../assets/Business.png";
+
 
 const projects = [
   {
     title: "Proposify-AI",
     description:
-      "AI-powered proposal generator with Gmail integration & 3D interactive UI. Reduced manual effort by 70%.",
-    stack: "Google Gemini API, HTML, CSS, JavaScript, Bootstrap",
+      "AI-powered Business Proposal Generator & Chatbot. Developed full-stack application using Google's Gemini AI to generate structured business proposals from user prompts. Reduced manual effort by 70% and integrated Gmail API for automated email delivery. Designed responsive SPA with interactive 3D backgrounds using Vanta.js.",
+    stack: "React.js, JavaScript (ES6+), Google Gemini API, Bootstrap, RESTful APIs",
     link: "https://proposify-ai-1.onrender.com/proposify-ai.html",
+    image: Proposify,
   },
   {
-    title: "E-Commerce App",
+    title: "E-Commerce Web Application",
     description:
-      "Full MERN stack e-commerce platform with JWT auth, product catalog, cart, and admin panel.",
-    stack: "React, Node.js, Express, MongoDB, Tailwind CSS",
+      "Full-featured e-commerce platform with user authentication, product catalog, shopping cart, and admin panel. Implemented secure JWT authentication with bcrypt encryption. Developed RESTful APIs with 35% faster response times. Created responsive design with 25% better mobile performance.",
+    stack: "React.js, Node.js, Express.js, MongoDB, Tailwind CSS, JWT, Bcrypt",
     link: "https://main-project-frontend-react.vercel.app/",
+    image: ECommerce,
+  },
+  {
+    title: "Bhasaka Technologies Clone",
+    description:
+      "Modern Business Website Recreation. Recreated responsive business website with smooth animations and modern UI/UX. Implemented Framer Motion for advanced animations and page transitions. Optimized for cross-browser compatibility and mobile-first design.",
+    stack: "React.js, Tailwind CSS, Framer Motion, JavaScript (ES6+)",
+    link: "https://bhasaka-tech.vercel.app/",
+    image: Bhasaka,
+  },
+  {
+    title: "Akamai Technologies Clone",
+    description:
+      "Enterprise Security Platform Interface. Built responsive clone of leading cybersecurity company's website. Implemented complex navigation and interactive components with smooth scrolling and professional corporate design.",
+    stack: "React.js, Tailwind CSS, Framer Motion, Responsive Design",
+    link: "https://akamai-blush.vercel.app/",
+    image: Akamai,
+  },
+  {
+    title: "Sarat Tech Clone",
+    description:
+      "Technology Solutions Company Website. Developed modern tech company interface with clean, professional layout. Implemented responsive grid systems and interactive elements. Features optimized performance and SEO-friendly structure.",
+    stack: "React.js, Tailwind CSS, Framer Motion, JavaScript",
+    link: "https://sarat-tech-vmxo.vercel.app/",
+    image: Sarat,
+  },
+  {
+    title: "Business Labs Clone",
+    description:
+      "Business Consulting Platform. Created responsive business consulting website with elegant animations. Implemented smooth page transitions and interactive hover effects. Designed pixel-perfect layout matching original design specifications.",
+    stack: "React.js, Tailwind CSS, Framer Motion, CSS3",
+    link: "https://businesslabs-frontend.vercel.app/",
+    image: BusinessLabs,
   },
 ];
 
 export default function Projects() {
   const [dots, setDots] = useState([]);
 
-  // generate random floating dots
   useEffect(() => {
-    const temp = Array.from({ length: 20 }, () => ({
+    const temp = Array.from({ length: 25 }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       delay: Math.random() * 5,
@@ -56,9 +96,9 @@ export default function Projects() {
         />
       ))}
 
-      {/* Title */}
+      {/* Section Title */}
       <motion.h2
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-4xl md:text-5xl font-bold text-white mb-10 text-center"
@@ -66,36 +106,44 @@ export default function Projects() {
         My <span className="text-cyan-400">Projects</span>
       </motion.h2>
 
-      {/* Projects Container */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="grid md:grid-cols-2 gap-10 z-10 max-w-5xl w-full"
-      >
-        {projects.map((p, index) => (
+      {/* Projects Grid */}
+      <div className="grid md:grid-cols-2 gap-10 z-10 max-w-5xl w-full">
+        {projects.map((p, idx) => (
           <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
+            key={idx}
+            className="relative rounded-2xl overflow-hidden cursor-pointer"
+            whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="relative bg-[#1a1a1a]/60 border border-white/10 rounded-2xl p-6 
-              backdrop-blur-xl shadow-[0_0_25px_rgba(0,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,0,255,0.25)] 
-              transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold text-cyan-400">{p.title}</h3>
-            <p className="text-gray-300 mt-3 leading-relaxed">{p.description}</p>
-            <p className="text-sm text-gray-400 mt-2">Tech: {p.stack}</p>
-            <a
-              href={p.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-pink-500 hover:text-pink-400 transition"
+            {/* Project Image */}
+            <img
+              src={p.image}
+              alt={p.title}
+              className="w-full h-64 object-cover rounded-2xl"
+            />
+
+            {/* Overlay on Hover */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileHover={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute inset-0 bg-black/80 flex flex-col justify-center items-start p-6 gap-2"
             >
-              View Project →
-            </a>
+              <h3 className="text-xl font-bold text-cyan-400">{p.title}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">{p.description}</p>
+              <p className="text-gray-400 text-xs mt-2">Tech: {p.stack}</p>
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 text-pink-500 hover:text-pink-400 transition"
+              >
+                View Project →
+              </a>
+            </motion.div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Glow gradient circles */}
       <div className="absolute -top-40 left-1/2 w-[400px] h-[400px] bg-gradient-to-r from-cyan-500/20 to-pink-500/20 rounded-full blur-3xl opacity-40 animate-pulse -translate-x-1/2" />

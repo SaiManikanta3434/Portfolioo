@@ -44,17 +44,17 @@ export default function Home() {
         {/* Left Content */}
         <div className="max-w-xl text-white">
           <p className="text-cyan-400 font-semibold mb-3">
-            Full Stack Developer (MERN)
+            React.js Frontend Developer
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Hello! <span className="inline-block">👋</span> I am{" "}
             <span className="text-white">Sai Manikanta Varikuti</span>
           </h2>
           <p className="text-gray-300 mb-6 leading-relaxed">
-            Results-driven MERN Stack Developer with hands-on experience in
-            building scalable, secure, and high-performance web applications.
-            Passionate about leveraging AI tools and modern frameworks to deliver
-            optimized solutions.
+            Passionate React.js Frontend Developer with expertise in building
+            modern, responsive, and scalable web applications. Proven ability to
+            translate UI/UX designs into high-performance components using
+            React.js, Redux, and JavaScript (ES6+).
           </p>
           <div className="flex gap-4">
             <a

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import ResumePDF from "../assets/resume.pdf"; 
 
 export default function Contact() {
@@ -62,6 +63,26 @@ export default function Contact() {
           📧 <span className="text-cyan-400">saivarikuti1@gmail.com</span> | 📞 <span className="text-cyan-400">+91 7036143077</span>
         </p>
         <p className="text-gray-400 mb-6">📍 Hyderabad, India</p>
+
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 mb-6 text-2xl">
+          <a
+            href="https://www.linkedin.com/in/sai-manikanta-varikuti-06a9b125b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-300 transition"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/SaiManikanta3434?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-200 transition"
+          >
+            <FaGithub />
+          </a>
+        </div>
 
         {/* Download Resume Button */}
         <motion.a

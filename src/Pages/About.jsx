@@ -91,13 +91,22 @@ export default function About() {
             ABOUT ME
           </p>
           <h2 className="bg-gradient-to-r from-blue-800 to-blue-400 bg-clip-text text-transparent text-3xl md:text-4xl font-bold mb-4">
-            Passionate Developer & Problem Solver
+            React.js Frontend Developer & Problem Solver
           </h2>
           <p className="text-gray-300 leading-relaxed">
-            I specialize in building modern, responsive web applications with
-            clean code and elegant design. I enjoy integrating AI tools and
-            creating interactive experiences that users love. My goal is to
-            deliver projects that are both performant and visually engaging.
+            I specialize in building modern, responsive web applications using
+            React.js, Redux, and JavaScript (ES6+). With expertise in
+            translating UI/UX designs into pixel-perfect, high-performance
+            components, I focus on creating intuitive user experiences that are
+            both scalable and maintainable. My experience includes integrating
+            RESTful APIs and GraphQL, conducting cross-browser compatibility
+            testing, and applying performance optimization techniques to ensure
+            applications run smoothly across all devices. I thrive in
+            Agile/Scrum environments and am passionate about writing clean,
+            reusable code following industry best practices. I've successfully
+            delivered projects with measurable impact, including 20% performance
+            improvements and 30% faster load times, while maintaining a strong
+            focus on user engagement and satisfaction.
           </p>
         </div>
       </div>

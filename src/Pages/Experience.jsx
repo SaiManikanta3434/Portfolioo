@@ -5,23 +5,28 @@ const experiences = [
   {
     company: "Randstad India Pvt. Ltd – Hyderabad, India",
     date: "Apr 2024 – Oct 2024",
-    role: "Full Stack Developer",
+    role: "Full Stack Developer (React.js Focus)",
     description: [
-      "Engineered and enhanced internal full-stack applications, improving system performance by 20%.",
-      "Developed secure RESTful APIs with JWT authentication and bcrypt encryption.",
-      "Built reusable React components, focusing on performance and UX improvements.",
-      "Collaborated within an Agile cross-functional team using Git/GitHub CI/CD workflows.",
+      "Developed responsive web interfaces using React.js and ES6+, implementing pixel-perfect designs from UI/UX specifications.",
+      "Optimized components for maximum performance across devices, achieving 20% performance improvement.",
+      "Conducted cross-browser compatibility testing ensuring consistent experience across all platforms.",
+      "Integrated RESTful APIs with frontend components using MVC architecture for seamless data flow.",
+      "Wrote clean, reusable, maintainable code and participated in code reviews, sprint planning, and daily stand-ups.",
+      "Utilized Webpack, Babel, npm/yarn for build processes and dependency management.",
+      "Debugged and fixed UI/UX bugs through systematic testing and collaboration with backend developers.",
     ],
     color: "from-purple-500 to-indigo-500",
   },
   {
     company: "Codedale",
-    date: "Feb 2025 - Present",
+    date: "Feb 2024 – Present",
     role: "Full Stack Developer Intern",
     description: [
-      "Developed full-stack application using Google’s Gemini AI to generate structured proposals.",
-      "Integrated Gmail API for automated delivery, reducing manual effort by 70%.",
-      "Designed SPA with interactive 3D backgrounds using Vanta.js.",
+      "Developed full-stack application using React.js and Google's Gemini AI to generate structured business proposals.",
+      "Integrated Gmail API for automated email delivery, reducing manual effort by 70%.",
+      "Designed responsive single-page application (SPA) with interactive 3D backgrounds using Vanta.js.",
+      "Built reusable React components with focus on performance and user experience.",
+      "Collaborated using Git and GitHub for version control and CI/CD workflows.",
     ],
     color: "from-pink-500 to-red-500",
   }
@@ -77,10 +82,10 @@ export default function Experience() {
         className="text-center mb-14 z-10"
       >
         <p className="text-pink-500 uppercase tracking-widest font-semibold">
-          Experiences
+          
         </p>
         <h2 className="text-4xl md:text-5xl font-bold text-white">
-          My Work Experiences
+          My <span className="text-cyan-300">Experience</span> 
         </h2>
       </motion.div>
 
