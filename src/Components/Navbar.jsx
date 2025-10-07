@@ -28,10 +28,10 @@ export default function Navbar() {
           to="/"
           className="text-2xl font-bold text-white tracking-wide hover:scale-105 transition-transform"
         >
-          <span className="bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
-            Sai
+          <span className="bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text text-4xl ">
+            Portfolio
           </span>
-          Portfolio
+          
         </Link>
 
         {/* Navigation Links */}
@@ -40,7 +40,7 @@ export default function Navbar() {
             <Link
               key={item.path}
               to={item.path}
-              className={`relative text-gray-300 hover:text-white transition 
+              className={`relative text-gray-300 hover:text-cyan-300 transition 
               ${location.pathname === item.path ? "text-cyan-400" : ""}`}
             >
               {item.name}
