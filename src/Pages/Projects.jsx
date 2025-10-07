@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Proposify from "../assets/proposify.png";
+import Proposify from "../assets/Proposify.png";
 import ECommerce from "../assets/E-commerce.png";
 import Bhasaka from "../assets/BhasakaTech.png";
-import Akamai from "../assets/akamai.png";
-import Sarat from "../assets/sarat.png";
+import Akamai from "../assets/Akamai.png";
+import Sarat from "../assets/Sarat.png";
 import BusinessLabs from "../assets/Business.png";
 
 
